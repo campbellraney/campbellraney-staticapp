@@ -1,0 +1,29 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Pirate ships{% endblock %}
+
+{% block page_description %}A list of pirate ships of lore from fact and fiction.{% endblock %}
+
+{% block content %}
+<article class="container py-4">
+  <h1 class="mb-4 text-center">Ships of the Golden Age of Pirates</h1>
+  <p class="lead text-center mb-5">Intro text here.</p>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for ship in pirates.ships %}
+    <div class="col">
+      <div class="card h-100 shadow-sm border-0 bg-light">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-primary">{{ ship.ship_name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ ship.captain }}</h6>
+          <p class="card-text mt-2">{{ ship.blurb }}</p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <a href="{{ ship.source }}" class="card-link text-decoration-underline text-secondary">More about the ship</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}
