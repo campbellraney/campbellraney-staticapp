@@ -16,6 +16,12 @@
       "type": "sheet",
       "name": "pirates"
     }
+    ,
+    {
+      "fileId": "1D_wU-Hp2wOaf0aSJJT8B9WZD5eYQB2Yar7pLfsWtc_Q",
+      "type": "doc",
+      "name": "blog"
+    }
   ],
   "to_bake": [
     {
@@ -24,6 +30,13 @@
       "array": "books",
       "slug": "slug",
       "path": "books"
+    },
+    {
+      "template": "bake-blog",
+      "data": "blog",
+      "array": "blogs",
+      "slug": "slug",
+      "path": "blog"
     }
   ]
 }
